@@ -1,0 +1,64 @@
+mao10cms修改  ---待补充
+
+注册界面：
+1.需添加其他选项，例如验证码、有关条款、手机号、真实姓名等
+2.使用ajax或者jquery进行输入框的提示，提示一些要求，例如不低于6位
+3.注册用户名使用admin的时候，提示注册成功后，跳转时出现参数错误，一直重复  mark2
+
+首页界面：
+1.添加商品或者宝贝搜索功能  mark1
+2.店铺的信息，展现其是哪个店铺的，或者类似于品牌功能
+3.貌似无法添加二级分类
+4.可以添加热门商品(主题那块注释)，热门话题？ =
+
+群组界面：
+
+短信验证：
+1.提交订单时，防止恶意订单，
+2.防止恶意获取验证短信，（不过通常人家都有时间限制的）
+
+商品界面：
+1.get方法获取参数时过滤。当id=1，（那些分类id，管理员帐号，用户帐号等信息） mark3
+
+后台界面：
+1.将添加商品，添加宝贝，添加分类等链接统一
+2.添加打印订单功能
+3.用户管理功能
+4.订单管理、、、
+5.套餐管理、、、
+
+支付界面:
+1.填写收货人信息，可以修改成几号宿舍楼，自己填写宿舍号
+2.填写完收货人信息后，直接跳到支付宝支付接口界面，应让用户选择是送货上门还是在线支付。
+//注意首字母大写！！！，服务器为linux环境！！！
+Admin控制器标准：
+
+系统设置：Admin/Setting/index
+服务器信息 Admin/Setting/Server
+管理员操作记录 admin/setting/operation
+用户操作记录 admin/setting/userlog
+积分记录 admin/setting/score
+友情链接管理 admin/setting/links
+添加友情链接 admin/setting/addlink
+
+备份数据库 Admin/Backup/backup
+数据库表段列表 Admin/Backup/tablist
+
+Rbac还是原来的标准
+
+//
+普通用户
+用户列表 admin/user/userlist
+用户操作 admin/user/edit
+
+商品列表 admin/good/index
+添加商品 admin/good/add
+套餐管理 admin/good/taocan
+商品分类列表 admin/good/categorylist
+添加商品分类 admin/good/addcategory
+
+店铺管理 admin/store/index
+添加店铺 admin/store/add
+
+
+订单管理。。。。

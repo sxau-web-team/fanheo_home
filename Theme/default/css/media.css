@@ -1,0 +1,21 @@
+@media (min-width: 1200px) {
+	#pro-list .thumbnail .img-div {height: 273px;}
+	#home-top #carousel-example-generic .img-div {height: 366px;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	#pro-list .thumbnail .img-div {height: 303px;}
+	#home-top #carousel-example-generic .img-div {height: 302px;}
+	#group-list .img-div {height: 305px;}
+}
+@media (min-width: 769px) and (max-width: 991px) {
+	#pro-list .thumbnail .img-div {height: 355px;}
+	#home-top #carousel-example-generic .img-div {height: 231px;}
+	#group-list .img-div {height: 353px;}
+}
+@media (max-width: 768px) {
+	#post-list-default h4.media-heading {margin-bottom: 0; line-height: 20px;}
+	#post-list-default .media-heading a {white-space: normal; height: 40px; font-size: 16px;}
+}
+@media (max-width: 480px) {
+	
+}

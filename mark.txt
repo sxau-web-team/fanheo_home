@@ -1,0 +1,21 @@
+1.\Application\Home\Controller\IndexController.class.php 第13行 publish 改成 pro ，即可首页最上方宝贝搜索
+2.\Application\User\Controller\RegisterController.class.php 第17行添加如下代码行，避免以管理员帐号注册而循环：
+			if($_POST['user_name']==C('ADMIN_LOGIN')){
+				$this->error('账号已存在！');
+			}
+3.\Application\Pro\Controller\IndexController.class.php 第45行修改成以下代码行：
+		$args_id = M('meta')->where("meta_key='term' AND type='basic'")->getField('page_id',true);
+        if(!is_numeric($id)) {
+	        $this->error('参数错误');
+        }
+		if(!in_array($id,$args_id))
+		{
+			$this->redirect('/home');
+		}
+		$condition['type'] = 'pro';
+		// mc_set_views($id);
+        $this->page = M('page')->field('id,title,content,type,date')->where($condition)->where("id='$id'")->select();
+4.        \Application\User\Controller\RegisterController.class.php 第28行
+$user_email = M('meta')->where("meta_key='user_email' AND type ='user'")->getField('meta_value',true);
+5.    \Application\User\Controller\RegisterController.class.php 第16行
+$user_login = M('meta')->where("meta_key='user_name' AND type ='user'")->getField('meta_value',true);

@@ -1,0 +1,16 @@
+/* PRO */
+#pro-single {margin-top: 30px;}
+#single-top {padding: 30px 0 50px; border-bottom: 2px solid #f3f6f9;}
+#single-top #pro-index-tlin {border: 1px solid #e3e6e9; padding: 20px 20px 40px;}
+#single-top #pro-index-tlin .imgshow {width: 513px;height: 513px;display: table-cell;vertical-align: middle;text-align: center;outline: none;}
+#single-top #pro-index-tlin .imgshow img { max-height: 513px; max-width: 513px; width: auto;vertical-align: middle; }
+#single-top #pro-index-tlin .carousel-indicators {bottom: -30px;;}
+#single-top #pro-index-tlin .carousel-indicators li {width: 30px; height: 8px; background-color: #222222; margin: 0; border: 0; opacity: 0.7; filter: alpha(opacity=70);}
+#single-top #pro-index-tlin .carousel-indicators li.active {background-color: #ff4a00;}
+#single-top #pro-index-tlin #publish-carousel-indicators li {margin: 0 2px;}
+#pro-index-trin h1 {margin-top: 0px; line-height: 40px; font-size: 30px; color: #5a5a5a;}
+#pro-index-trin h1 .form-control {font-size: 30px; color: #5a5a5a; line-height: 40px;}
+#pro-index-trin h3 {font-size: 40px; margin-bottom: 60px; line-height: 50px;}
+#pro-index-trin h3 .form-control {display: inline-block; width: 150px; font-size: 40px; height: 50px; line-height: 50px;padding: 0 12px;}
+#pro-index-trin .btn-group .btn {padding: 15px 30px; font-size: 18px;}
+#pro-index-trin .open button,#pro-index-trin .btn-group button.add-cart {border-color:#ee330a;background-color:#ee330a; color: #fff;}
