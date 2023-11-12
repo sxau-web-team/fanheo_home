@@ -1,0 +1,46 @@
+version: '3.9'
+services: 
+  db:
+    image: dockerproxy.com/library/mysql:5.7
+    volumes:
+      - ./mysql:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dubuqingfeng
+      MYSQL_DATABASE: dubuqingfeng
+      MYSQL_USER: dubuqingfeng
+      MYSQL_PASSWORD: dubuqingfeng
+    depends_on:
+      - php
+  nginx:
+    build: ./docker/nginx/
+    container_name: nginx-container
+    ports: 
+      - 1234:80
+    volumes:
+      - ./html:/var/www/html
+      - ./log:/var/log/nginx/
+    links:
+      - php
+  php:
+    # image: php:7.4-fpm
+    build: ./
+    container_name: php-container
+    expose:
+      - 9000
+    user: 1000:1000
+    environment:
+        - TZ=Asia/Shanghai
+        - DOCKER_USER=dubuqingfeng
+        - PGID=101
+        - PUID=1026
+    volumes: 
+      - ./html:/var/www/html
+      # - ./phpconfig:/usr/local/etc/php/
+  # phpmyadmin:
+  #   image: phpmyadmin
+  #   restart: always
+  #   ports:
+  #     - 8080:80
+  #   depends_on:
+  #     - db
